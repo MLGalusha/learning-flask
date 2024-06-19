@@ -1,0 +1,25 @@
+<!-- templates/game.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <form method="post">
+      <h1>Rock Paper Scissors</h1>
+      <label>Choose one:</label>
+      <input type="radio" id="rock" name="choice" value="r">
+      <label for="rock">Rock</label><br>
+      <input type="radio" id="paper" name="choice" value="p">
+      <label for="paper">Paper</label><br>
+      <input type="radio" id="scissors" name="choice" value="s">
+      <label for="scissors">Scissors</label><br><br>
+      <input type="submit" value="Play">
+    </form>
+    {% if result %}
+      <p>{{ result }}</p>
+    {% endif %}
+  </body>
+</html>
